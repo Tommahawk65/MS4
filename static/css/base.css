@@ -1,0 +1,97 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/website-background.webp') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    font-family: 'Koulen', cursive;
+}
+
+
+/* navbar*/
+
+.container {
+    margin: 20px;
+}
+
+header {
+    padding-top: 40px;
+}
+
+.web-header {
+    width: 90%;
+}
+
+.header-logo {
+    height: 12vh;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+    border-radius: 25px;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+  
+.navbar-logo-centered .navbar-nav .nav-link{
+    padding: .5em 1em;
+}
+
+.center-logo{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.nav-item{
+    min-width: 50px;
+    font-size: 2vw;
+}
+
+.navbar-expand-lg{
+    text-align: center;
+    align-items: center;
+}
+  
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
+}
+  /* fixed top navbar only on medium and up */
+  @media (min-width: 992px) {
+      .fixed-top-desktop-only {
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: 1030;
+      }
+  
+      .header-container {
+          padding-top: 164px;
+      }
+  }

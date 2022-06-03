@@ -37,51 +37,62 @@
 
   </head>
   <body>
-      
-       
-    
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                        <li class="nav-item mx-lg-1 mx-xl-3">
-                            <a class="nav-link" href="#">Guitars <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item mx-lg-1 mx-xl-3">
-                            <a class="nav-link" href="#">Basses</a>
-                        </li>
-                        <li class="nav-item mx-lg-1 mx-xl-3">
-                            <a class="nav-link" href="#">Amps</a>
-                        </li>
-                        <li class="nav-item mx-lg-1 mx-xl-3">
-                            <a class="nav-link" href="#">Effects</a>
-                        </li>
-                    </ul>
-                    <div class = "center-logo">
-                        <a href="index.html">
-                            <img class="header-logo img-responsive" src="/media/header-logo.png">
-                        </a>
-                    </div>
-                    <form class="form-inline my-2 mx-xl-3">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    </form>
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item mx-lg-1 mx-md-2 mx-md-0">
-                            <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item mx-lg-1 mx-xl-3">
-                            <a class="nav-link" href="#">Cart</a>
-                        </li>
-                    </ul>
-                </div>
+    <header class="container-fluid nav-container fixed-top">
+        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
+            <div class="col-12 col-lg-1 my-auto text-center">
             </div>
-        </nav>
-        </div>
+            <div class="col-12 col-lg-1 my-auto text-center">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h3 class="logo-font text-white my-0">Guitar</h3>
+                </a>
+            </div>
+            <div class="col-12 col-lg-1 my-auto  text-center text-lg-left">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h3 class="logo-font text-white my-0">Bass</h3>
+                </a>
+            </div>
+            <div class="col-12 col-lg-1 my-auto    py-lg-0 text-center text-lg-left">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h3 class="logo-font text-white my-0">Amps</h3>
+                </a>
+            </div>
+            <div class="col-12 col-lg-1 my-auto  text-center text-lg-left">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h3 class="logo-font text-white my-0">Effects</h3>
+                </a>
+            </div>
+            <div class = "col-12 col-lg-2 navbar-nav  center-logo">
+                <a class = "brand" href="index.html">
+                    <img class="header-logo img-responsive" src="/media/header-logo.png">
+                </a>
+            </div>
+            <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <form class="form-inline ">
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search">
+                        </div>
 
-      </header>
+                </form>
+            </div>
+            <div class="col-12 col-lg-1 my-auto  text-center ">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h4 class="logo-font text-white my-0"><i class="fas fa-user icon-nav"></i>Profile</h4>
+                </a>
+            </div>
+            <div class="col-12 col-lg-1 my-auto  text-center ">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h4 class="logo-font text-white my-0"><i class="fa-solid fa-cart-shopping icon-nav"></i>[0] $0</h4>
+                </a>
+            </div>
+            <div class="col-12 col-lg-1 my-auto  text-center "> 
+            </div>
+
+    </header>
+
+
+
+     
     
 
     
@@ -95,6 +106,39 @@
 
     {% block content %}
     {% endblock %}
+
+    <!-- Footer -->
+<footer class="text-center text-lg-start text-muted">
+    <!-- Section: Social media -->
+    <section
+      class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+    >
+    <div class="me-5 d-none d-lg-block text-white">
+      <span>Need Help?:</span>
+    </div>
+  
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f text-white"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter text-white"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram text-white"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-youtube text-white"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+   
+  </footer>
+  <!-- Footer -->
 
     {% block postloadjs %}
     {% endblock %}

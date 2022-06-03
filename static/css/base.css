@@ -50,8 +50,11 @@ header {
 }
 
 .center-logo{
-    margin-left: 30px;
-    margin-right: 30px;
+   
+    text-align: center;
+    
+    
+    display: inline-flex;
 }
 .center {
     display: block;
@@ -60,27 +63,30 @@ header {
     width: 50%;
   }
 
-.nav-item{
-    min-width: 50px;
-    font-size: 2vw;
+.home {
+    size: 10px;
 }
 
-.navbar-expand-lg{
-    text-align: center;
-    align-items: center;
+.icon-nav {
+    padding-right: 7px;
+    display: inline;
 }
-  
-.navbar-nav {
-    float:none;
-    margin:0 auto;
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
     display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
     text-align: center;
+    pointer-events: none;
+    color: #aaa;
 }
 
-.navbar-nav > li {
-    display: inline-block;
-    float:none;
-}
+/*  */
+
+
   /* fixed top navbar only on medium and up */
   @media (min-width: 992px) {
       .fixed-top-desktop-only {

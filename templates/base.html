@@ -24,9 +24,10 @@
     {% endblock %}
 
     {% block corejs %}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+   
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/998af489ad.js" crossorigin="anonymous"></script>
     {% endblock %}
 
@@ -36,59 +37,87 @@
     <title>Guitar Boutique {% block extra_title %}{% endblock %}</title>
 
   </head>
-  <body>
-    <header class="container-fluid nav-container fixed-top">
-        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-1 my-auto text-center">
-            </div>
-            <div class="col-12 col-lg-1 my-auto text-center">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h3 class="logo-font text-white my-0">Guitar</h3>
-                </a>
-            </div>
-            <div class="col-12 col-lg-1 my-auto  text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h3 class="logo-font text-white my-0">Bass</h3>
-                </a>
-            </div>
-            <div class="col-12 col-lg-1 my-auto    py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h3 class="logo-font text-white my-0">Amps</h3>
-                </a>
-            </div>
-            <div class="col-12 col-lg-1 my-auto  text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h3 class="logo-font text-white my-0">Effects</h3>
-                </a>
-            </div>
-            <div class = "col-12 col-lg-2 navbar-nav  center-logo">
+  <body class = "d-flex flex-column min-vh-100">
+    <header class="container-fluid fixed-top">
+      <div id="topnav" class="row  pt-lg-2 d-none d-lg-flex">
+          <div class="col-12 col-lg-1 my-auto text-center">
+          </div>
+          <div class="col-12 col-lg-1 my-auto text-center">
+            <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                <h3 class="logo-font text-white my-0">Guitar</h3>
+            </a>
+          </div>
+          <div class="col-12 col-lg-1 my-auto  text-center text-lg-left">
+            <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                <h3 class="logo-font text-white my-0">Bass</h3>
+            </a>
+           </div>
+          <div class="col-12 col-lg-1 my-auto    py-lg-0 text-center text-lg-left">
+            <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                <h3 class="logo-font text-white my-0">Amps</h3>
+            </a>
+          </div>
+          <div class="col-12 col-lg-1 my-auto  text-center text-lg-left">
+            <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                <h3 class="logo-font text-white my-0">Effects</h3>
+            </a>
+          </div>
+          <div class = "col-12 col-lg-2 navbar-nav  center-logo">
+            <a class = "brand" href="index.html">
+              <img class="header-logo img-responsive" src="/media/header-logo.png">
+            </a>
+          </div>
+          <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
+            <form class="form-inline ">
+              <div class="form-group has-search">
+                  <span class="fa fa-search form-control-feedback"></span>
+                  <input type="text" class="form-control" placeholder="Search">
+                  </div>
+            </form>
+          </div>
+          <div class="col-12 col-lg-1 my-auto  text-center ">
+            <a href="{% url 'home' %}" class="nav-link main-logo-link">
+              <h4 class="logo-font text-white my-0"><i class="fas fa-user icon-nav"></i>Profile</h4>
+            </a>
+          </div>
+          <div class="col-12 col-lg-1 my-auto  text-center ">
+            <a href="{% url 'home' %}" class="nav-link main-logo-link">
+              <h4 class="logo-font text-white my-0"><i class="fa-solid fa-cart-shopping icon-nav"></i>
+                {% if grand_total %}
+                    ${{ grand_total|floatformat:2 }}
+                {% else %}
+                    $0.00
+                {% endif %}
+              </h4>
+            </a>
+          </div>
+          <div class="col-12 col-lg-1 my-auto text-center">
+          </div>
+          
+      </div>
+      <div class="row px-3 d-lg-none">
+          <nav class="navbar navbar-expand-lg">
+              <div class = "col-4">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+              <div class = "col-4 col-lg-2 navbar-nav center-logo">
                 <a class = "brand" href="index.html">
-                    <img class="header-logo img-responsive" src="/media/header-logo.png">
+                  <img class="header-logo img-responsive" src="/media/header-logo.png">
                 </a>
-            </div>
-            <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <form class="form-inline ">
-                    <div class="form-group has-search">
-                        <span class="fa fa-search form-control-feedback"></span>
-                        <input type="text" class="form-control" placeholder="Search">
-                        </div>
+              </div>
+              <div class = "basket-mobile-icon pt-2 col-4">
+                {% include 'includes/mobile-header.html' %}
+              </div>
+              {% include 'includes/main-nav.html' %}
+          </nav>
+      </div>
+  </header>
 
-                </form>
-            </div>
-            <div class="col-12 col-lg-1 my-auto  text-center ">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h4 class="logo-font text-white my-0"><i class="fas fa-user icon-nav"></i>Profile</h4>
-                </a>
-            </div>
-            <div class="col-12 col-lg-1 my-auto  text-center ">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h4 class="logo-font text-white my-0"><i class="fa-solid fa-cart-shopping icon-nav"></i>[0] $0</h4>
-                </a>
-            </div>
-            <div class="col-12 col-lg-1 my-auto  text-center "> 
-            </div>
 
-    </header>
+
+
 
 
 
@@ -108,7 +137,7 @@
     {% endblock %}
 
     <!-- Footer -->
-<footer class="text-center text-lg-start text-muted">
+<footer class="text-center text-lg-start text-muted mt-auto">
     <!-- Section: Social media -->
     <section
       class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
@@ -118,18 +147,18 @@
     </div>
   
       <!-- Right -->
-      <div>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-facebook-f text-white"></i>
+      <div class="text-center">
+        <a href="" class="mx-3 text-center">
+          <i class="fab fa-facebook-f fa-lg text-white"></i>
         </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-twitter text-white"></i>
+        <a href="" class="mx-3 text-center">
+          <i class="fab fa-twitter fa-lg text-white"></i>
         </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-instagram text-white"></i>
+        <a href="" class="mx-3 text-center">
+          <i class="fab fa-instagram fa-lg text-white"></i>
         </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-youtube text-white"></i>
+        <a href="" class="mx-3 text-center">
+          <i class="fab fa-youtube fa-lg text-white"></i>
         </a>
       </div>
       <!-- Right -->

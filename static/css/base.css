@@ -125,6 +125,20 @@ hr {
     margin-right: 10px;
 }
 
+/* homepage product cards */
+
+.sale-title{
+    background-color: rgba(195, 194, 194, 0.4);
+    width: 100%;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.product-card {
+    background-color: rgba(195, 194, 194, 0.583);
+}
+
   /* fixed top navbar only on medium and up */
   @media (min-width: 992px) {
       .fixed-top-desktop-only {

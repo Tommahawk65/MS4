@@ -22,12 +22,14 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    product = get_object_or_404(Product, pk=product_id)
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-    if request.user.is_authenticated:
-        user = UserProfile.objects.get(user=request.user)
-    else:
-        user = None
+
+    context = {
+        'product': product,
+    }
+
+    return render(request, 'products/product_detail.html', context)
+    
 

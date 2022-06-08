@@ -1,0 +1,28 @@
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row hp-section-1 mt-4">
+        <div class="col-2 d-flex justify-content-center">
+            <div class="product-card" style="width: 18rem;">
+                <div class="div-product-card-img">
+                    {% if featured_product_1.image %}
+                    <img src="{{ MEDIA_URL }}{{ featured_product_1.image }}"
+                        alt="{{ featured_product_1.name }}">
+                    {% else %}
+                    <img src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
+                    {% endif %}
+                </div>
+                <div class="card-body">
+                    <p class="product-card-title">{{ featured_product_1.name }}</p>
+                    <p class="product-price text-center">€{{ featured_product_1.price }}</p>
+                </div>
+            </div>
+        </div>
+                
+               
+    </div>
+</div>
+
+
+
+{% endblock %}

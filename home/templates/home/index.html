@@ -12,16 +12,24 @@
 {% include 'home/includes/newsletter.html' %}
 <div class="row mx-5">
     <div class="col-6 my-5">
-        <button type="submit" class="btn btn-light mb-2 rounded-pill">Guitars</button>
+        <a href="{% url 'products' %}?category=guitars">
+            <button type="submit" class="btn btn-light rounded-pill">Guitars</button>
+        </a>
     </div>
     <div class="col-6 my-5">
-        <button type="submit" class="btn btn-light mb-2 rounded-pill">Basses</button>
+        <a href="{% url 'products' %}?category=basses">
+            <button type="submit" class="btn btn-light rounded-pill">Basses</button>
+        </a>
     </div>
     <div class="col-6 my-5">
-        <button type="submit" class="btn btn-light mb-2 rounded-pill">Amps</button>
+        <a href="{% url 'products' %}?category=amps">
+            <button type="submit" class="btn btn-light rounded-pill">Amps</button>
+        </a>
     </div>
     <div class="col-6 my-5">
-        <button type="submit" class="btn btn-light rounded-pill">Effects</button>
+        <a href="{% url 'products' %}?category=effects">
+            <button type="submit" class="btn btn-light rounded-pill">Effects</button>
+        </a>
     </div>
 </div>
 {% endblock %}

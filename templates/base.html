@@ -68,10 +68,10 @@
             </a>
           </div>
           <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
-            <form method="GET" action=""class="form-inline ">
+            <form method="GET" action="{% url 'products' %}" class="form">
               <div class="form-group has-search">
                   <span class="fa fa-search form-control-feedback"></span>
-                  <input type="text" class="form-control" placeholder="Search">
+                  <input type="text" class="form-control" name="q" placeholder="Search">
                   </div>
             </form>
           </div>

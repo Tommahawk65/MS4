@@ -130,13 +130,43 @@ hr {
 .sale-title{
     background-color: rgba(195, 194, 194, 0.4);
     width: 100%;
-    margin-bottom: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .product-card {
     background-color: rgba(195, 194, 194, 0.583);
+}
+
+.card {
+    max-width: 540px;
+    > .row {
+        min-height: 200px;
+    }
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+}
+
+.card-body span{
+    background-color: #e51400 !important;
+    float: right;
+}
+
+.img-cover {
+  object-fit: cover;
+}
+
+/* newsletter */
+.newsletter-row {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.join-button {
+    text-align: left;
 }
 
   /* fixed top navbar only on medium and up */
@@ -148,9 +178,17 @@ hr {
           left: 0;
           z-index: 1030;
       }
+
+    }
+
+/* center newsletter button on small screens */
+  @media (max-width: 768px) {
+
+    .join-button {
+      text-align: center;
+  }
+
   
-      .header-container {
-          padding-top: 164px;
-      }
+     
   }
 

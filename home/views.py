@@ -7,7 +7,7 @@ from products.models import Product
 def index(request):
     """ A view to return the index page """
 
-    featured_product_1 = get_object_or_404(Product, pk=43)
+    featured_product_1 = get_object_or_404(Product, pk=175)
     featured_product_2 = get_object_or_404(Product, pk=44)
     featured_product_3 = get_object_or_404(Product, pk=45)
 

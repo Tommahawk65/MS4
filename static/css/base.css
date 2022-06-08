@@ -169,6 +169,21 @@ hr {
     text-align: left;
 }
 
+
+/* products page */
+.main-product-title {
+    margin-bottom: 20px;
+}
+
+.main-product-row{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+
+.buy-now-btn {
+    margin-top: 20px;
+}
   /* fixed top navbar only on medium and up */
   @media (min-width: 992px) {
       .fixed-top-desktop-only {

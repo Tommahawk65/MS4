@@ -92,7 +92,7 @@
             {% endif %}
           </div>
           <div class="col-12 col-lg-1 my-auto  text-center ">
-            <a href="{% url 'home' %}" class="nav-link main-logo-link">
+            <a href="{% url 'view_bag' %}" class="nav-link main-logo-link">
               <h4 class="logo-font text-white my-0"><i class="fa-solid fa-cart-shopping icon-nav"></i>
                 {% if grand_total %}
                     ${{ grand_total|floatformat:2 }}
@@ -114,7 +114,7 @@
                 </button>
               </div>
               <div class = "col-4 col-lg-2 navbar-nav center-logo">
-                <a class = "brand" href="index.html">
+                <a class = "brand" href="{% url 'home' %}">
                   <img class="header-logo img-responsive" src="/media/header-logo.png">
                 </a>
               </div>

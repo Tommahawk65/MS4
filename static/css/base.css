@@ -184,6 +184,16 @@ hr {
 .buy-now-btn {
     margin-top: 20px;
 }
+
+/* shopping bag */
+
+.totals-col, .bag-main-btns {
+    
+    text-align: right!important;
+}
+
+
+
   /* fixed top navbar only on medium and up */
   @media (min-width: 992px) {
       .fixed-top-desktop-only {

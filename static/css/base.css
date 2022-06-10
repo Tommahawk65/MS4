@@ -192,6 +192,13 @@ hr {
     text-align: right!important;
 }
 
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+
 
 
   /* fixed top navbar only on medium and up */

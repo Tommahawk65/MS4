@@ -23,7 +23,7 @@
         <li class="nav-item">
             {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
-                    <a href="" class="logo-font font-weight-bold nav-link text-white mr-5">Product Management</a>
+                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                 {% endif %}
                     <a href="{% url 'profile' %}" class="logo-font font-weight-bold nav-link text-white mr-5">Profile</a>
                     <a href="{% url 'account_logout' %}" class="logo-font font-weight-bold nav-link text-white mr-5">Logout</a>
@@ -40,3 +40,9 @@
        
     </ul>
 </div>
+
+
+
+
+
+

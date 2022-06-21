@@ -27,6 +27,7 @@ header {
 
 .header-logo {
     height: 12vh;
+    
 }
 
 .has-search .form-control {
@@ -97,7 +98,6 @@ header {
 
 .basket-mobile-icon {
     text-align: right!important;
-    padding-right: 15px;
 }
 
 .navbar-collapse {
@@ -107,6 +107,14 @@ header {
 .bag-mobile-icon{
     width: 100%;
     height: 100%;
+}
+
+.dropdown-list{
+    position: absolute;
+    z-index: 1;
+    background-color: #323232fa;
+   
+    
 }
 
 

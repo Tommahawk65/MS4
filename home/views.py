@@ -18,4 +18,5 @@ def index(request):
         'featured_product_3': featured_product_3,
     }
 
-    return render(request, template, context)
+    return render(request, template, context, 'home/index.html')
+

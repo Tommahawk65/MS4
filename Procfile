@@ -1,1 +1,1 @@
-web: gunicorn guitar-boutique.wsgi:application 
+web: gunicorn MS4.wsgi:application 

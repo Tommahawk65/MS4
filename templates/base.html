@@ -234,8 +234,11 @@
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
       <div class="me-5 d-none d-lg-block text-white">
         <span>Need Help?:</span>
-        <button type="submit" class="btn btn-light btn-sm rounded-pill">Contact Us</button>
+        <a  href="{% url 'contact' %}">
+          <button type="submit" class="btn btn-light btn-sm rounded-pill">Contact Us</button>
+        </a>
       </div>
+        
       <!-- Right -->
       <div class="text-center">
         <a href="" class="mx-3 text-center">

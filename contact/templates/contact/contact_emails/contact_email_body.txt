@@ -1,0 +1,13 @@
+Hello {{ instance.name }}!
+
+Thanks for getting in contact with us!
+
+Your message is below.
+
+Subject:{{ instance.subject }}
+
+Massage:{{ instance.message }}
+
+We will be in touch soon!
+
+Guitar Boutique

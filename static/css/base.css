@@ -127,11 +127,10 @@ header {
 
 .dropdown-list{
     position: absolute;
-    z-index: 1;
+    z-index: 30;
     background-color: #323232fa;
-   
-    
 }
+
 
 
 /* delivery banner  */

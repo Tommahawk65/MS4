@@ -4,30 +4,38 @@
 {% block content %}
 
 <div class="container-fluid">
-    
-
-   
-    <div class="row">
-        <div class="product-container col-10 offset-1">
-            <div class="row mt-1 mb-2"></div>
+    <div class="row mx-3">
+        <div class="sale-title col-12 d-flex justify-content-center text-white">
+            {% if current_categories %}
+            {% for category in current_categories %}
+                <h3 class="active-breadcrumb title-text">{{ category.friendly_name }}</h3>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+    <div class="row mx-3">
+        <div class="product-container">
+            <div class="row "></div>
             <div class="row">
                 {% for product in products %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card border-0">
-                        {% if product.image %}
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        </a>
-                        {% else %}
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                alt="{{ product.name }}">
-                        </a>
-                        {% endif %}
-                        <div class="card-body pb-0 text-center">
-                            <p class="mb-0">{{ product.name }}</p>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-3">
+                    <div class="card border-0 product-card" style="max-height: 380px; min-height: 200px;">
+                        <div class="card-image" style="text-align: center;">
+                            {% if product.image %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
+                            {% else %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}noimage.png"
+                                    alt="{{ product.name }}">
+                            </a>
+                            {% endif %}
+                        </div>
+                        <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">
+                            <p class="mt-auto">{{ product.name }}</p>
                             {% if request.user.is_superuser %}
-                            <small class="ml-3">
+                            <small class="ml-3 mt-auto">
                                 <a href="{% url 'edit_product' product.id %}">Edit</a> | 
                                 <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                             </small>
@@ -35,27 +43,6 @@
                         </div>
                     </div>
                 </div>
-            
-                {% if forloop.counter|divisibleby:1 %}
-                <div class="col-12 d-sm-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:2 %}
-                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:3 %}
-                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:4 %}
-                <div class="col-12 d-none d-xl-block mb-5">
-                    <hr>
-                </div>
-                {% endif %}
                 {% endfor %}
             </div>
         </div>

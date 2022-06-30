@@ -25,3 +25,7 @@ class ProductReviewForm(forms.ModelForm):
 
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
+
+        super(ProductReviewForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'text-white'

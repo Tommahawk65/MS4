@@ -15,32 +15,33 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row text-center mt-4">
             <div class="col">
                 {% if bag_items %}
                     <div class="table-responsive rounded ">
                         <table class="table table-sm table-borderless">
                             <thead class="text-white">
                                 <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">Product Info</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
+                                    <th scope="col-12"></th>
+                                    <th scope="col-12">Product Info</th>
+                                    <th scope="col-12">Price</th>
+                                    <th scope="col-12">Qty</th>
                                     <th class ="text-center" scope="col">Subtotal</th>
                                 </tr>
                             </thead>
 
                             {% for item in bag_items %}
                                 <tr>
-                                    
-                                    <td class="p-3 w-25">
-                                        {% if item.product.image %}
-                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-                                        {% else %}
-                                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
-                                        {% endif %}
-                                    </td>
-                                    <td class="py-3">
+                                    <div class="product-card">
+                                        <td class="p-3 w-25 product-card" style="min-width: 150px;">
+                                            {% if item.product.image %}
+                                            <img class="img-fluid rounded product-card" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                            {% else %}
+                                            <img class="img-fluid rounded product-card" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                            {% endif %}
+                                        </td>
+                                    </div>
+                                    <td class="py-3" style="min-width: 150px;">
                                         <p class="my-0 text-white"><strong>{{ item.product.name }}</strong></p>
                                         <p class="my-0 small text-white">SKU: {{ item.product.sku|upper }}</p>
                                     </td>
@@ -116,8 +117,8 @@
                         </table>
                     </div>
                 {% else %}
-                    <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <p class="lead mb-5 text-white">Your bag is empty.</p>
+                    <a href="{% url 'home' %}" class="btn btn-outline-light rounded-0 btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>

@@ -6,7 +6,7 @@
     {% block meta %}
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
 
     {% block extra_meta %}
@@ -38,29 +38,29 @@
     <title>Guitar Boutique {% block extra_title %}{% endblock %}</title>
 
   </head>
-  <body class = "d-flex flex-column min-vh-100">
+  <body class = "d-flex flex-column min-vh-100 ">
     <header class="container-fluid">
       <div id="topnav" class="row  pt-lg-2 d-none d-lg-flex">
           <div class="col-12 col-lg-1 my-auto text-center">
           </div>
           <div class="col-12 col-lg-1 my-auto text-center">
             <a href="{% url 'products' %}?category=guitars" class="nav-link main-logo-link">
-                <h3 class="logo-font text-white my-0">Guitar</h3>
+                <h3 class="logo-font text-white nav-item-text my-0">Guitar</h3>
             </a>
           </div>
           <div class="col-12 col-lg-1 my-auto  text-center text-lg-left">
             <a href="{% url 'products' %}?category=basses" class="nav-link main-logo-link">
-                <h3 class="logo-font text-white my-0">Bass</h3>
+                <h3 class="logo-font text-white nav-item-text my-0">Bass</h3>
             </a>
            </div>
-          <div class="col-12 col-lg-1 my-auto    py-lg-0 text-center text-lg-left">
-            <a href="{% url 'products' %}?category=amps" class="nav-link main-logo-link">
-                <h3 class="logo-font text-white my-0">Amps</h3>
+           <div class="col-12 col-lg-1 my-auto  text-center text-lg-left">
+            <a href="{% url 'products' %}?category=effects" class="nav-link main-logo-link">
+                <h3 class="logo-font text-white my-0 nav-item-text">Effects</h3>
             </a>
           </div>
           <div class="col-12 col-lg-1 my-auto  text-center text-lg-left">
-            <a href="{% url 'products' %}?category=effects" class="nav-link main-logo-link">
-                <h3 class="logo-font text-white my-0">Effects</h3>
+            <a href="{% url 'products' %}?category=merch" class="nav-link main-logo-link">
+                <h3 class="logo-font text-white my-0 nav-item-text">Merch</h3>
             </a>
           </div>
           <div class = "col-12 col-lg-2 navbar-nav  center-logo">
@@ -78,7 +78,7 @@
           </div>
           <div class="col-12 col-lg-1 my-auto text-center">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle account-heading text-white nav-item-text pb-4" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Account
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -97,7 +97,7 @@
           </div>
           <div class="col-12 col-lg-1 my-auto  text-center ">
             <a href="{% url 'view_bag' %}" class="nav-link main-logo-link">
-              <h4 class="logo-font text-white my-0"><i class="fa-solid fa-cart-shopping icon-nav"></i>
+              <h4 class="logo-font text-white my-0 nav-item-text"><i class="fa-solid fa-cart-shopping icon-nav"></i>
                 {% if grand_total %}
                     ${{ grand_total|floatformat:2 }}
                 {% else %}
@@ -128,13 +128,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=amps" id="">
-                            Amps
-                        </a>
+                      <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=effects" id="">
+                          Effects
+                      </a>
                     </li>
                     <li class="nav-item">
-                        <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=effects" id="">
-                            Effects
+                        <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=merch" id="">
+                            Merch
                         </a>
                     </li>
                     <li class="nav-item">
@@ -150,7 +150,7 @@
                         {% endif %}
                     </li>
                     <li class="nav-item">
-                        <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="">
+                        <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'contact' %}">
                             Contact Us
                         </a>
                     </li>
@@ -229,7 +229,7 @@
     {% endblock %}
 
     <!-- Footer -->
-  <footer class="text-center text-lg-start text-muted mt-auto">
+  <footer class="text-center text-lg-start text-muted mt-auto footer">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
       <div class="me-5 d-none d-lg-block text-white">
@@ -241,16 +241,16 @@
         
       <!-- Right -->
       <div class="text-center">
-        <a href="" class="mx-3 text-center">
+        <a href="" class="mx-3 text-center social-icon">
           <i class="fab fa-facebook-f fa-lg text-white"></i>
         </a>
-        <a href="" class="mx-3 text-center">
+        <a href="" class="mx-3 text-center social-icon">
           <i class="fab fa-twitter fa-lg text-white"></i>
         </a>
-        <a href="" class="mx-3 text-center">
+        <a href="" class="mx-3 text-center social-icon">
           <i class="fab fa-instagram fa-lg text-white"></i>
         </a>
-        <a href="" class="mx-3 text-center">
+        <a href="" class="mx-3 text-center social-icon">
           <i class="fab fa-youtube fa-lg text-white"></i>
         </a>
       </div>

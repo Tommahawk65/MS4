@@ -31,38 +31,33 @@
 
 ### Unregistered user goals
 
-1. As a first time visitor, I want to easily understand the purpose of the website.
-2. As a first time visitor, I want to be able to easily navigate throughout the site to find content.
-3. As a first time visitor, I want to view all the items sold on the site, sorted by categories.
-4. As a first time visitor, I want to be able to search the product range.
-5. As a first time visitor, I want to be able to add items to my basket and receive feedback when I interact with the website.
-6. As a first time visitor, I want to to edit and/or delete the items in my basket and receive feedback when something has changed.
-7. As a first time visitor, I want to search the product range.
-8. As a first time visitor, I want to be able to contact the site owners with and issues/queries.
-9. As a first time visitor, I want to be able to visit the website on every device with formatting appropriate for all screen sizes.
-10. As a first time visitor, I want to register an account on the website. 
-
+1. As a first time user, I want to easily understand the purpose of the website.
+2. As a first time user, I want to be able to easily navigate throughout the site to find content.
+3. As a first time user, I want to view all the items sold on the site, sorted by categories.
+4. As a first time user, I want to be able to search the product range.
+5. As a first time user, I want to be able to add items to my basket and receive feedback when I interact with the website.
+6. As a first time user, I want to to edit and/or delete the items in my basket and receive feedback when something has changed.
+7. As a first time user, I want to search the product range.
+8. As a first time user, I want to be able to contact the site owners with and issues/queries.
+9. As a first time user, I want to be able to visit the website on every device with formatting appropriate for all screen sizes.
+10. As a first time user, I want to register an account on the website. 
+11. As a first time user, I want to be able to buy items with a card. 
+12. As a first time user, I want to be able to review items on the website.
 
 ### Registered user goals
 
 1. As a returning user, I want to log in to my profile and update any personal information.
 2. As a returning user, I want to see and review my past orders.
-3. As a returning user, I want to be able to rate and leave reviews for products on the site.
-4. As a returning user, I want to login to my profile, which will show a selection of my recipes on my profile page. 
-5. As a returning user, I want to be able to logout of my profile. 
+3. As a returning user, I want to be able to logout of my profile. 
 
-- As a registered user, I should be able to log in to my profile to make my experience more personal.
-- As a registered user, I should be able save items to a wish-list for future purchase consideration. 
-- As a registered user, I should be able to edit my default delivery and payment information. 
-- As a registered user, I should be able to see and review my past orders.
-- As a registered user, I should be able to rate and leave reviews for products on the site.
-- As a registered user, I should be able to contact the business owner with any queries I might have.
 
 ### Admin
 
+1. As a admin user, I want to be able to add, edit and delete items from the product range.
+2. As a admin user, I want to see and review my past orders.
 - As an admin user, I should be able to add, edit and delete items from the product range.
 - As an admin user, I should have access to an admin section to see details of users and orders.
-- As an admin user, I should be able to offer incentive to make larger purchases by offering free delivery over a set amount.
+
 
 **Structure**
 

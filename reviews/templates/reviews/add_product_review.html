@@ -21,12 +21,11 @@
             <h2 class="logo-font text-white mb-4">Product Review</h2>
         </div>
     </div>
-    <div class="row">
+    <div class="row ">
         <div class="col-12 text-center">
             <h5 class="text-white">{{ product }}</h5>
            
         </div>
-
     </div>
 
     <!-- Add Product Review Form -->
@@ -35,14 +34,12 @@
             <form method="POST" action="{% url 'add_product_review' product.id %}" class="form mb-2"
                 enctype="multipart/form-data">
                 {% csrf_token %}
-
                 <!-- Iterate through fields and render using crispy forms -->
                 {% for field in form %}
-
-                {{ field | as_crispy_field }}
-
+                <div class="text-white">
+                    {{ field | as_crispy_field }}
+                </div>
                 {% endfor %}
-
                 <!-- Submit or cancel -->
                 <div class="text-center mt-4">
                     <a class="btn btn-outline-light rounded-0" href="{% url 'product_detail' product.id %}">Back to

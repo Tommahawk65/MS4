@@ -6,14 +6,6 @@
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
     <div class="overlay"></div>
     <div class="container-fluid">
@@ -22,7 +14,6 @@
                 <h3 class= "title-text">Checkout</h3>
             </div>
         </div>
-
         <div class="row mx-3">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
                 <p class="text-white">Order Summary ({{ product_count }})</p>
@@ -108,7 +99,6 @@
                         <!-- Pass the client secret to the view so we can get the payment intent id -->
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
-
                     <div class="submit-button text-center mt-5 mb-2">                    
 						<a href="{% url 'view_bag' %}" class="btn btn-outline-light rounded-0">
 							<span class="icon">

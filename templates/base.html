@@ -44,8 +44,7 @@
   <body class = "d-flex flex-column min-vh-100 ">
     <header class="container-fluid">
       <div id="topnav" class="row  pt-lg-2 d-none d-lg-flex">
-          <div class="col-12 col-lg-1 my-auto text-center">
-          </div>
+          <div class="col-12 col-lg-1 my-auto text-center"></div>
           <div class="col-12 col-lg-1 my-auto text-center">
             <a href="{% url 'products' %}?category=guitars" class="nav-link main-logo-link">
                 <h3 class="logo-font text-white nav-item-text my-0">Guitar</h3>
@@ -79,25 +78,23 @@
                   </div>
             </form>
           </div>
-          <div class="col-12 col-lg-1 my-auto text-center">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle account-heading text-white nav-item-text pb-4" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Account
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                {% if request.user.is_authenticated %}
-                {% if request.user.is_superuser %}
-                    <li><a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a></li>
-                {% endif %}
-                    <li><a href="{% url 'profile' %}" class="dropdown-item">Profile</a></li>
-                    <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
-                {% else %}
-                    <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
-                    <li> <a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
-            {% endif %}
-              </ul>
-            </li>
-          </div>
+            <div class="col-12 col-lg-1 my-auto pt-4 text-center nav-item dropdown ">
+                <a class="nav-link dropdown-toggle account-heading text-white nav-item-text pb-4" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Account
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  {% if request.user.is_authenticated %}
+                  {% if request.user.is_superuser %}
+                      <li><a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a></li>
+                  {% endif %}
+                      <li><a href="{% url 'profile' %}" class="dropdown-item">Profile</a></li>
+                      <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+                  {% else %}
+                      <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
+                      <li> <a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
+                  {% endif %}
+                </ul>
+            </div>
           <div class="col-12 col-lg-1 my-auto  text-center ">
             <a href="{% url 'view_bag' %}" class="nav-link main-logo-link">
               <h4 class="logo-font text-white my-0 nav-item-text"><i class="fa-solid fa-cart-shopping icon-nav"></i>
@@ -157,9 +154,8 @@
                             Contact Us
                         </a>
                     </li>
-                   
-                </ul>
-            </div>
+                </ul> 
+              </div>
             </div>
             <div class = "col-4 col-lg-2 navbar-nav center-logo">
               <a class = "brand" href="{% url 'home' %}">
@@ -171,13 +167,13 @@
                 <li class="list-inline-item">
                     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-white{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
                         <div class="bag-mobile-icon">
-                          <i class="fas fa-shopping-bag fa-2x"></i></div>
+                          <i class="fas fa-shopping-bag fa-2x"></i>
                         </div>
                     </a>
                   </li>
               </ul>
             </div>
-            <div class = "row d-lg-none py-4 mobile-search-bar" style="padding-left: 5rem; padding-right: 5rem;">
+            <div class = "container w-100 row d-lg-none py-2 mobile-search-bar text center" style="padding-left: 5rem; padding-right: 5rem;">
               <div class="col-12 col-lg-2 py-lg-0 mobile-search-bar text-center">
                 <form method="GET" action="{% url 'products' %}" class="form">
                   <div class="form-group has-search">
@@ -186,30 +182,28 @@
                       </div>
                 </form>
               </div>
-            </div>
-
-              
+            </div>  
         </nav>
-    </div>
-  </header>
-  {% if messages %}
-    <div class="message-container"></div>
-    <div class="message-container">
-        {% for message in messages %}
-            {% with message.level as level %}
-                {% if level == 40 %}
-                    {% include 'includes/toasts/toast_error.html' %}
-                {% elif level == 30 %}
-                    {% include 'includes/toasts/toast_warning.html' %}
-                {% elif level == 25 %}
-                    {% include 'includes/toasts/toast_success.html' %}
-                {% else %}
-                    {% include 'includes/toasts/toast_info.html' %}
-                {% endif %}
-            {% endwith %}
-        {% endfor %}
-    </div>
-  {% endif %}
+      </div>
+    </header>
+    {% if messages %}
+      <div class="message-container"></div>
+      <div class="message-container">
+          {% for message in messages %}
+              {% with message.level as level %}
+                  {% if level == 40 %}
+                      {% include 'includes/toasts/toast_error.html' %}
+                  {% elif level == 30 %}
+                      {% include 'includes/toasts/toast_warning.html' %}
+                  {% elif level == 25 %}
+                      {% include 'includes/toasts/toast_success.html' %}
+                  {% else %}
+                      {% include 'includes/toasts/toast_info.html' %}
+                  {% endif %}
+              {% endwith %}
+          {% endfor %}
+      </div>
+    {% endif %}
 
     <div id="delivery-banner" class="row text-center">
       <hr class="text-white">
@@ -243,46 +237,41 @@
     {% endblock %}
 
     <!-- Footer -->
-  <footer class="text-center text-lg-start text-muted mt-auto footer">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <div class="me-5 d-none d-lg-block text-white">
-        <span>Need Help?:</span>
-        <a  href="{% url 'contact' %}">
-          <button type="submit" class="btn btn-light btn-sm rounded-pill">Contact Us</button>
-        </a>
+    <footer class="text-center text-lg-start text-muted mt-auto footer">
+      <div class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <div class="me-5 d-none d-lg-block text-white">
+          <span>Need Help?:</span>
+            <input type=submit onClick="location.href='{% url 'contact' %}'"
+              value='Contact Us' class="btn btn-light btn-sm rounded-pill">
+        </div>
+        <div class="text-center">
+          <a href="https://www.facebook.com/" class="mx-3 text-center social-icon" target="_blank">
+            <i class="fab fa-facebook-f fa-lg text-white"></i>
+          </a>
+          <a href="https://twitter.com/" class="mx-3 text-center social-icon" target="_blank">
+            <i class="fab fa-twitter fa-lg text-white"></i>
+          </a>
+          <a href="https://www.instagram.com/" class="mx-3 text-center social-icon" target="_blank">
+            <i class="fab fa-instagram fa-lg text-white"></i>
+          </a>
+          <a href="https://www.youtube.com/" class="mx-3 text-center social-icon" target="_blank">
+            <i class="fab fa-youtube fa-lg text-white"></i>
+          </a>
+        </div>
       </div>
-        
-      <!-- Right -->
-      <div class="text-center">
-        <a href="https://www.facebook.com/" class="mx-3 text-center social-icon" target="_blank">
-          <i class="fab fa-facebook-f fa-lg text-white"></i>
-        </a>
-        <a href="https://twitter.com/" class="mx-3 text-center social-icon" target="_blank">
-          <i class="fab fa-twitter fa-lg text-white"></i>
-        </a>
-        <a href="https://www.instagram.com/" class="mx-3 text-center social-icon" target="_blank">
-          <i class="fab fa-instagram fa-lg text-white"></i>
-        </a>
-        <a href="https://www.youtube.com/" class="mx-3 text-center social-icon" target="_blank">
-          <i class="fab fa-youtube fa-lg text-white"></i>
-        </a>
-      </div>
-      <!-- Right -->
-    </section>
-  </footer>
+    </footer>
 
-  {% block postloadjs %}
-    <script type="text/javascript">
-      window.onload = (event) => {
-        let myAlert = document.querySelectorAll('.toast')[0];
-        if (myAlert) {
-          let bsAlert = new bootstrap.Toast(myAlert);
-          bsAlert.show();
-        }
-      };
-    </script>
-  {% endblock %}
+    {% block postloadjs %}
+      <script>
+        window.onload = (event) => {
+          let myAlert = document.querySelectorAll('.toast')[0];
+          if (myAlert) {
+            let bsAlert = new bootstrap.Toast(myAlert);
+            bsAlert.show();
+          }
+        };
+      </script>
+    {% endblock %}
 
    
   </body>

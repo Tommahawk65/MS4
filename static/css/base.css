@@ -83,10 +83,6 @@ header {
     width: 50%;
   }
 
-.home {
-    size: 10px;
-}
-
 .icon-nav {
     padding-right: 2px;
     display: inline;
@@ -266,22 +262,16 @@ input[name='q']::placeholder {
     padding-right: 8%;
 }
 
-
-
 .left-order-info {
    
     text-align: left;
-   
   }
 
 .right-order-info {
-   
     text-align: right;
-   
   }
 
-
-
+  
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -376,19 +366,6 @@ input[name='q']::placeholder {
 .allauth-form-inner-content input::placeholder {
     color: #aab7c4;
 }
-
-.form-check {
-    display: block;
-    min-height: $form-check-min-height;
-    padding-left: $form-check-padding-start;
-    margin-bottom: $form-check-margin-bottom;
-  
-    .form-check-input {
-      float: center;
-      margin-left: $form-check-padding-start * -1;
-    }
-  }
-  
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {

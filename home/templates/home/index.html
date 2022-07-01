@@ -14,24 +14,20 @@
 </div>
 <div class="row mx-5">
     <div class="col-6 my-5">
-        <a href="{% url 'products' %}?category=guitars">
-            <button type="submit" class="btn btn-light rounded-pill" style="width: 150px;">Guitars</button>
-        </a>
+        <input type=button onClick="location.href='{% url 'products' %}?category=guitars'"
+            value='Guitars' class="btn btn-light rounded-pill" style="width: 150px;">
     </div>
     <div class="col-6 my-5">
-        <a href="{% url 'products' %}?category=basses">
-            <button type="submit" class="btn btn-light rounded-pill" style="width: 150px;">Basses</button>
-        </a>
+        <input type=button onClick="location.href='{% url 'products' %}?category=basses'"
+            value='Basses' class="btn btn-light rounded-pill" style="width: 150px;">
     </div>
     <div class="col-6 my-5">
-        <a href="{% url 'products' %}?category=effects">
-            <button type="submit" class="btn btn-light rounded-pill" style="width: 150px;">Effects</button>
-        </a>
+        <input type=button onClick="location.href='{% url 'products' %}?category=effects'"
+            value='Effects' class="btn btn-light rounded-pill" style="width: 150px;">
     </div>
     <div class="col-6 my-5">
-        <a href="{% url 'products' %}?category=merch">
-            <button type="submit" class="btn btn-light rounded-pill" style="width: 150px;">Merch</button>
-        </a>
+        <input type=button onClick="location.href='{% url 'products' %}?category=merch'"
+            value='Merch' class="btn btn-light rounded-pill" style="width: 150px;">
     </div>
 </div>
 {% endblock %}

@@ -13,7 +13,6 @@
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-3">
                 <div class="card border-0 product-card" style="max-height: 380px; min-height: 270px;">
                     <div class="card-image" style="text-align: center;">
-                        
                         {% if featured_product_1.image %}
                         <a href="{% url 'product_detail' featured_product_1.id %}">
                             <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_1.image.url }}"
@@ -21,9 +20,9 @@
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' featured_product_1.id %}">
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
-                        {% endif %}
+                            <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
                         </a>
+                        {% endif %}
                     </div>
                     <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">
                         <p class="product-card-title">{{ featured_product_1.name }}</p>
@@ -41,7 +40,8 @@
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' featured_product_2.id %}">
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
+                            <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
+                        </a>
                         {% endif %}
                     </div>
                     <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">
@@ -60,7 +60,8 @@
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' featured_product_3.id %}">
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
+                            <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
+                        </a>
                         {% endif %}
                     </div>
                     <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">
@@ -79,7 +80,8 @@
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' featured_product_4.id %}">
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
+                            <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
+                        </a>
                         {% endif %}
                     </div>
                     <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">
@@ -98,7 +100,8 @@
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' featured_product_5.id %}">
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
+                            <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
+                        </a>
                         {% endif %}
                     </div>
                     <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">
@@ -117,7 +120,8 @@
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' featured_product_6.id %}">
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
+                            <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
+                        </a>
                         {% endif %}
                     </div>
                     <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">

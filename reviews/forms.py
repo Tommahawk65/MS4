@@ -14,10 +14,11 @@ class ProductReviewForm(forms.ModelForm):
         fields = ('rating',
                   'title',
                   'review')
-
+        
         widgets = {
             'rating': forms.Select(choices=RATING_CHOICES)
         }
+
 
     def __init__(self, *args, **kwargs):
 
@@ -25,7 +26,14 @@ class ProductReviewForm(forms.ModelForm):
 
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
+        
+            
+            
+
 
         super(ProductReviewForm, self).__init__(*args, **kwargs)
         for visible in self.visible_fields():
-            visible.field.widget.attrs['class'] = 'text-white'
+            visible.field.widget.attrs['class'] = 'text-black'
+           
+
+        

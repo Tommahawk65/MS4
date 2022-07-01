@@ -7,6 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="{{ MEDIA_URL }}header-logo.png">
     {% endblock %}
 
     {% block extra_meta %}
@@ -67,7 +68,7 @@
           </div>
           <div class = "col-12 col-lg-2 navbar-nav  center-logo">
             <a class = "brand" href="{% url 'home' %}">
-              <img class="header-logo img-responsive" src="{{ MEDIA_URL }}header-logo.png">
+              <img class="header-logo img-responsive" src="{{ MEDIA_URL }}header-logo.png" alt="site-logo">
             </a>
           </div>
           <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -120,22 +121,22 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="dropdown-list navbar-nav w-auto px-3">
                     <li class="nav-item">
-                        <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=guitars" id="">
+                        <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=guitars">
                             Guitars
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=basses" id="">
+                        <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=basses">
                             Basses
                         </a>
                     </li>
                     <li class="nav-item">
-                      <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=effects" id="">
+                      <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=effects">
                           Effects
                       </a>
                     </li>
                     <li class="nav-item">
-                        <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=merch" id="">
+                        <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=merch">
                             Merch
                         </a>
                     </li>
@@ -162,7 +163,7 @@
             </div>
             <div class = "col-4 col-lg-2 navbar-nav center-logo">
               <a class = "brand" href="{% url 'home' %}">
-                <img class="header-logo img-responsive" src="{{ MEDIA_URL }}header-logo.png">
+                <img class="header-logo img-responsive" src="{{ MEDIA_URL }}header-logo.png" alt="site-logo">
               </a>
             </div>
             <div class ="basket-mobile-icon pt-2 col-4">
@@ -254,16 +255,16 @@
         
       <!-- Right -->
       <div class="text-center">
-        <a href="" class="mx-3 text-center social-icon">
+        <a href="https://www.facebook.com/" class="mx-3 text-center social-icon" target="_blank">
           <i class="fab fa-facebook-f fa-lg text-white"></i>
         </a>
-        <a href="" class="mx-3 text-center social-icon">
+        <a href="https://twitter.com/" class="mx-3 text-center social-icon" target="_blank">
           <i class="fab fa-twitter fa-lg text-white"></i>
         </a>
-        <a href="" class="mx-3 text-center social-icon">
+        <a href="https://www.instagram.com/" class="mx-3 text-center social-icon" target="_blank">
           <i class="fab fa-instagram fa-lg text-white"></i>
         </a>
-        <a href="" class="mx-3 text-center social-icon">
+        <a href="https://www.youtube.com/" class="mx-3 text-center social-icon" target="_blank">
           <i class="fab fa-youtube fa-lg text-white"></i>
         </a>
       </div>

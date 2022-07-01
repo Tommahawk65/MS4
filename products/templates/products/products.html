@@ -19,7 +19,7 @@
             <div class="row">
                 {% for product in products %}
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-3">
-                    <div class="card border-0 product-card" style="max-height: 380px; min-height: 200px;">
+                    <div class="card border-0 product-card" style="max-height: 380px; min-height: 270px;">
                         <div class="card-image" style="text-align: center;">
                             {% if product.image %}
                             <a href="{% url 'product_detail' product.id %}">

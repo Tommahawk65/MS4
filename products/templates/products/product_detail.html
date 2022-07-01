@@ -86,62 +86,63 @@
                 </form>
             </div>
         </div>
-        <!-- Product review section -->
-    <div class="row mt-n4">
-        <div class="col-12 col-lg-8 offset-lg-2 text-center mb-5">
+    </div>
+</div>
+<div class="row mx-5 mt-n4">
+    <div class="col-12 col-lg-8 offset-lg-2 text-center mb-5">
 
-            <!-- Title and review count -->
-            <h2 class="text-white"><u>Reviews</u></h2>
+        <!-- Title and review count -->
+        <h2 class="text-white"><u>Reviews</u></h2>
 
-            <!-- Add review if user logged in -->
-            {% if user.is_authenticated %}
-            <a href="{% url 'add_product_review' product.id %}" class="btn btn-outline-light">Add Review</a>
-            {% endif %}
+        <!-- Add review if user logged in -->
+        {% if user.is_authenticated %}
+        <a href="{% url 'add_product_review' product.id %}" class="btn btn-outline-light">Add Review</a>
+        {% endif %}
 
-            <!-- Existing reviews section -->
-            <div class="row">
+        <!-- Existing reviews section -->
+        <div class="row">
 
-                <!-- Iterate through reviews and display in cards -->
-                {% for review in product_reviews reversed %}
+            <!-- Iterate through reviews and display in cards -->
+            {% for review in product_reviews reversed %}
 
-                <!-- Check for relevant reviews to product -->
-                {% if product.name in review.product.name %}
-                <div class="col-md-6 my-4">
-                    <div class="card">
-                        <div class="card-header">
+            <!-- Check for relevant reviews to product -->
+            {% if product.name in review.product.name %}
+            <div class="col-md-6 my-4">
+                <div class="card">
+                    <div class="card-header">
 
-                            <!-- Title -->
-                            <h5 class="card-title">"{{ review.title }}"</h5>
+                        <!-- Title -->
+                        <h5 class="card-title">"{{ review.title }}"</h5>
 
-                            <!-- Rating -->
-                            <h6 class="card-subtitle mb-2 text-muted">Rating: {{ review.rating }}</h6>
+                        <!-- Rating -->
+                        <h6 class="card-subtitle mb-2 text-muted">Rating: {{ review.rating }}</h6>
 
-                            <!-- Edit and delete if user is review author -->
-                            {% if user == review.reviewer %}
-                            <small class="ml-3">
-                                <a href="{% url 'edit_product_review' product.id review.id %}">Edit</a> |
-                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                    Delete
-                                  </button>
-                            </small>
-                            {% endif %}
+                        <!-- Edit and delete if user is review author -->
+                        {% if user == review.reviewer %}
+                        <small class="ml-3">
+                            <a href="{% url 'edit_product_review' product.id review.id %}">Edit</a> |
+                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Delete
+                              </button>
+                        </small>
+                        {% endif %}
 
-                        </div>
+                    </div>
 
-                        <!-- Review -->
-                        <div class="card-body">
-                            <p class="card-text">{{ review.review }}</p>
-                        </div>
+                    <!-- Review -->
+                    <div class="card-body">
+                        <p class="card-text">{{ review.review }}</p>
+                    </div>
 
-                        <!-- Display review author and date of review -->
-                        <div class="card-footer text-muted">
+                    <!-- Display review author and date of review -->
+                    <div class="card-footer text-muted">
 
-                            {% if review.reviewer %}{{ review.reviewer }}{% else %}Anonymous{% endif %} -
-                            {{ review.date|date:"d M, Y" }}
+                        {% if review.reviewer %}{{ review.reviewer }}{% else %}Anonymous{% endif %} -
+                        {{ review.date|date:"d M, Y" }}
 
-                        </div>
                     </div>
                 </div>
+            </div>
 
               
             <!-- Modal -->

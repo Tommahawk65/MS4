@@ -1,7 +1,7 @@
 
 {% block content %}
 <div class="container-fluid header-container text-center">
-  <div class="row mx-2">
+  <div class="row mx-4">
         <div class="sale-title col-12 d-flex justify-content-center text-white">
             <h3 class= "title-text">New Arrivals</h3>
         </div>
@@ -9,16 +9,21 @@
 </div>
 <div class="container-fluid header-container">
     <div class="text-center">
-        <div class="row mx-2">
+        <div class="row mx-4">
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-3">
-                <div class="card border-0 product-card" style="max-height: 380px; min-height: 200px;">
+                <div class="card border-0 product-card" style="max-height: 380px; min-height: 270px;">
                     <div class="card-image" style="text-align: center;">
+                        
                         {% if featured_product_1.image %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_1.image.url }}"
-                            alt="HI">
+                        <a href="{% url 'product_detail' featured_product_1.id %}">
+                            <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_1.image.url }}"
+                                alt="guitar-card">
+                        </a>
                         {% else %}
+                        <a href="{% url 'product_detail' featured_product_1.id %}">
                         <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
                         {% endif %}
+                        </a>
                     </div>
                     <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">
                         <p class="product-card-title">{{ featured_product_1.name }}</p>
@@ -27,12 +32,15 @@
                 </div>
             </div>
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-3">
-                <div class="card border-0 product-card" style="max-height: 380px; min-height: 200px;">
+                <div class="card border-0 product-card" style="max-height: 380px; min-height: 270px;">
                     <div class="card-image" style="text-align: center;">
-                        {% if featured_product_1.image %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_2.image.url }}"
-                            alt="HI">
+                        {% if featured_product_2.image %}
+                        <a href="{% url 'product_detail' featured_product_2.id %}">
+                            <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_2.image.url }}"
+                                alt="guitar-card">
+                        </a>
                         {% else %}
+                        <a href="{% url 'product_detail' featured_product_2.id %}">
                         <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
                         {% endif %}
                     </div>
@@ -43,12 +51,15 @@
                 </div>
             </div>
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-3">
-                <div class="card border-0 product-card" style="max-height: 380px; min-height: 200px;">
+                <div class="card border-0 product-card" style="max-height: 380px; min-height: 270px;">
                     <div class="card-image" style="text-align: center;">
-                        {% if featured_product_1.image %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_3.image.url }}"
-                            alt="HI">
+                        {% if featured_product_3.image %}
+                        <a href="{% url 'product_detail' featured_product_3.id %}">
+                            <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_3.image.url }}"
+                                alt="guitar-card">
+                        </a>
                         {% else %}
+                        <a href="{% url 'product_detail' featured_product_3.id %}">
                         <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
                         {% endif %}
                     </div>
@@ -59,152 +70,65 @@
                 </div>
             </div>
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-3">
-                <div class="card border-0 product-card" style="max-height: 380px; min-height: 200px;">
+                <div class="card border-0 product-card" style="max-height: 380px; min-height: 270px;">
                     <div class="card-image" style="text-align: center;">
-                        {% if featured_product_1.image %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_1.image.url }}"
-                            alt="HI">
+                        {% if featured_product_4.image %}
+                        <a href="{% url 'product_detail' featured_product_4.id %}">
+                            <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_4.image.url }}"
+                                alt="guitar-card">
+                        </a>
                         {% else %}
+                        <a href="{% url 'product_detail' featured_product_4.id %}">
                         <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
                         {% endif %}
                     </div>
                     <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">
-                        <p class="product-card-title">{{ featured_product_1.name }}</p>
-                        <p class="product-price text-center">${{ featured_product_1.price }}</p>
+                        <p class="product-card-title">{{ featured_product_4.name }}</p>
+                        <p class="product-price text-center">${{ featured_product_4.price }}</p>
                     </div>
                 </div>
             </div>
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-3">
-                <div class="card border-0 product-card" style="max-height: 380px; min-height: 200px;">
+                <div class="card border-0 product-card" style="max-height: 380px; min-height: 270px;">
                     <div class="card-image" style="text-align: center;">
-                        {% if featured_product_1.image %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_2.image.url }}"
-                            alt="HI">
+                        {% if featured_product_5.image %}
+                        <a href="{% url 'product_detail' featured_product_5.id %}">
+                            <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_5.image.url }}"
+                                alt="guitar-card">
+                        </a>
                         {% else %}
+                        <a href="{% url 'product_detail' featured_product_5.id %}">
                         <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
                         {% endif %}
                     </div>
                     <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">
-                        <p class="product-card-title">{{ featured_product_2.name }}</p>
-                        <p class="product-price text-center">${{ featured_product_2price }}</p>
+                        <p class="product-card-title">{{ featured_product_5.name }}</p>
+                        <p class="product-price text-center">${{ featured_product_5.price }}</p>
                     </div>
                 </div>
             </div>
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-3">
-                <div class="card border-0 product-card" style="max-height: 380px; min-height: 200px;">
+                <div class="card border-0 product-card" style="max-height: 380px; min-height: 270px;">
                     <div class="card-image" style="text-align: center;">
-                        {% if featured_product_1.image %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_3.image.url }}"
-                            alt="HI">
+                        {% if featured_product_6.image %}
+                        <a href="{% url 'product_detail' featured_product_6.id %}">
+                            <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_6.image.url }}"
+                                alt="guitar-card">
+                        </a>
                         {% else %}
+                        <a href="{% url 'product_detail' featured_product_6.id %}">
                         <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
                         {% endif %}
                     </div>
                     <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">
-                        <p class="product-card-title">{{ featured_product_3.name }}</p>
-                        <p class="product-price text-center">${{ featured_product_3.price }}</p>
+                        <p class="product-card-title">{{ featured_product_6.name }}</p>
+                        <p class="product-price text-center">${{ featured_product_6.price }}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-3">
-                <div class="card border-0 product-card" style="max-height: 380px; min-height: 200px;">
-                    <div class="card-image" style="text-align: center;">
-                        {% if featured_product_1.image %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_1.image.url }}"
-                            alt="HI">
-                        {% else %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
-                        {% endif %}
-                    </div>
-                    <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">
-                        <p class="product-card-title">{{ featured_product_1.name }}</p>
-                        <p class="product-price text-center">${{ featured_product_1.price }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-3">
-                <div class="card border-0 product-card" style="max-height: 380px; min-height: 200px;">
-                    <div class="card-image" style="text-align: center;">
-                        {% if featured_product_1.image %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_2.image.url }}"
-                            alt="HI">
-                        {% else %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
-                        {% endif %}
-                    </div>
-                    <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">
-                        <p class="product-card-title">{{ featured_product_2.name }}</p>
-                        <p class="product-price text-center">${{ featured_product_2price }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-3">
-                <div class="card border-0 product-card" style="max-height: 380px; min-height: 200px;">
-                    <div class="card-image" style="text-align: center;">
-                        {% if featured_product_1.image %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_3.image.url }}"
-                            alt="HI">
-                        {% else %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
-                        {% endif %}
-                    </div>
-                    <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">
-                        <p class="product-card-title">{{ featured_product_3.name }}</p>
-                        <p class="product-price text-center">${{ featured_product_3.price }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-3">
-                <div class="card border-0 product-card" style="max-height: 380px; min-height: 200px;">
-                    <div class="card-image" style="text-align: center;">
-                        {% if featured_product_1.image %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_1.image.url }}"
-                            alt="HI">
-                        {% else %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
-                        {% endif %}
-                    </div>
-                    <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">
-                        <p class="product-card-title">{{ featured_product_1.name }}</p>
-                        <p class="product-price text-center">${{ featured_product_1.price }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-3">
-                <div class="card border-0 product-card" style="max-height: 380px; min-height: 200px;">
-                    <div class="card-image" style="text-align: center;">
-                        {% if featured_product_1.image %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_2.image.url }}"
-                            alt="HI">
-                        {% else %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
-                        {% endif %}
-                    </div>
-                    <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">
-                        <p class="product-card-title">{{ featured_product_2.name }}</p>
-                        <p class="product-price text-center">${{ featured_product_2price }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-3">
-                <div class="card border-0 product-card" style="max-height: 380px; min-height: 200px;">
-                    <div class="card-image" style="text-align: center;">
-                        {% if featured_product_1.image %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ featured_product_3.image.url }}"
-                            alt="HI">
-                        {% else %}
-                        <img class="card-img-top img-fluid"  style="height: 150px; width: auto;" src="{{ MEDIA_URL }}no_image.png" alt="No Image Available">
-                        {% endif %}
-                    </div>
-                    <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">
-                        <p class="product-card-title">{{ featured_product_3.name }}</p>
-                        <p class="product-price text-center">${{ featured_product_3.price }}</p>
-                    </div>
-                </div>
-            </div>
+        </div>
     </div>
 </div>
-
 
 
 {% endblock %}

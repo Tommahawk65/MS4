@@ -179,17 +179,6 @@ hr {
   object-fit: cover;
 }
 
-/* newsletter */
-.newsletter-row {
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-.join-button {
-    text-align: left;
-}
-
-
 /* products page */
 .main-product-title {
     margin-bottom: 20px;
@@ -421,14 +410,5 @@ input[name='q']::placeholder {
   
       }
 
-/* center newsletter button on small screens */
-  @media (max-width: 768px) {
 
-    .join-button {
-      text-align: center;
-  }
-
-  
-     
-  }
 

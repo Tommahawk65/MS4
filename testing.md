@@ -11,7 +11,6 @@ h1>Testing</h1>
 
 ### JS
 [JSHint](https://www.jshint.com/) No Errors.
-
 ![Javascript Validator](/readme_assets/testing/js_validation.png)
 
 ### Python

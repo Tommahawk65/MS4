@@ -192,7 +192,6 @@ The website is designed using the following technologies:
  
 - [Django](https://www.djangoproject.com/) – Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. 
 - [Bootstrap](https://getbootstrap.com/) – Bootstrap is a web framework that focuses on simplifying the development of informative web pages. 
-- [EmailJS](https://www.emailjs.com/) – Service that helps sending emails using client side technologies only. It only requires connecting EmailJS to one of the supported email services, creating an email template, and using their Javascript library to trigger an email. 
 - [Stripe](https://stripe.com/ie) – Allows individuals and businesses to make and receive payments over the Internet. 
  
 ### Database 

@@ -139,10 +139,12 @@ The images I used for this project came from [PNG Item](https://www.www.pngitem.
 - Emails are sent to the user for the purpose of account authentication, order confirmation and contact form confirmation. 
  
 ### Features left to implement in the future  
-- Newsletter to allow constant updates for registered users.  
+- Newsletter signup in the footer to allow constant updates for registered users. This was created in my Wireframes but due to time constraints did not make it into the finished version.  
 - The user can delete their profile to remove their information from the database (Data Protection Laws). 
-- Ability to show stock levels of products in real time. 
+- Ability to show stock levels of products in real time. This was shown in my Wireframes but the feature was never added, this would be good for if this website went into commercial use but for the purposes of this task wasn't added.
+- Homepage pagination was shown in the Wireframes but I later decided as the new arrivals and sale section wasn't too large I wanted to show all products at once, so this was altered. As the site grows this may be added later.
 - Full card functionality, Stipe is currently in test mode. 
+
  
 ## Database 
  
@@ -356,7 +358,7 @@ Amazon Web Services was used to host the static files and media files for the si
 - Configure the permissions for the bucket. 
 - In the permissions tab of the bucket. 
 - Select edit in the Cross-origin resource sharing(CORS) section and 
-pPaste the following code into the CORS configuration section. 
+paste the following code into the CORS configuration section. 
 ``` 
 [ 
 { 

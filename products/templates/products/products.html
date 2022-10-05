@@ -34,7 +34,7 @@
                         </div>
                         <div class="card-body align-text-bottom d-flex flex-column pb-0 text-center">
                             <p class="mt-auto">{{ product.name }}</p>
-                            <p class="product-price text-center">${{ product.price }}</p>
+                            <p class="product-price text-center">£{{ product.price }}</p>
                             {% if request.user.is_superuser %}
                             <small class="ml-3 mt-auto">
                                 <a href="{% url 'edit_product' product.id %}">Edit</a> | 

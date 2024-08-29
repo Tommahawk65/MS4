@@ -1,7 +1,7 @@
 **Full Stack Frameworks with Django Milestone Project** 
  
 ![Responsive Mockup of site](readme_assets/responsive_site.png) 
-[Link to Live Website](https://guitar-boutique.herokuapp.com/) 
+[Link to Live Website](https://guitar-boutique.herokuapp.com/) (Currently Offline)
  
 ## Project goals  
  
